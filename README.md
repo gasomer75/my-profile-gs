@@ -1,5 +1,8 @@
 # My Profile Page
 
+## Link:
+https://gasomer75.github.io/my-profile-gs/
+
 ## Purpose
 To create an online presence to attract potential employers by showcasing my skills as a web developer.
 

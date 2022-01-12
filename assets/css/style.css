@@ -1,7 +1,8 @@
 /* Variables */
 :root {
-    --color-1: #CCF381;
-    --color-2: #4831D4;
+    --subtitle: #2daf2d;
+    --bg-color: #347ba5;
+    --title: #a06017;
 }
 
 /* Universal Settings */
@@ -18,52 +19,150 @@ body {
 
 /* Header Section*/
 header {
-    padding: 0;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: var(--color-2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/space.jpg");
+    background-size: cover;
+    background-position: 100%;
+    background-attachment: fixed;
+    z-index: 9999;
 }
 
-header h1 {
-    margin: 35px 0 5px 30px;
-    color: var(--color-1);
-    font-size: 55px;
-    text-shadow: -4px -2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.nav-tabs {
-    margin: 15px 20px;
-}
-
-.nav-tabs ul {
-    margin-top: 60px;
+.my-name {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    list-style: none;
-}
-
-.nav-tabs ul li {
-    margin: 0 30px;
-}
-
-.nav-tabs ul li a {
-    padding: 5px 8px;
+    font-size: 40px;
+    font-variant: small-caps;
     font-weight: bold;
-    font-size: 28px;
-    color: var(--color-1);
-    list-style: none;
-    text-decoration: none;
-    text-shadow: -4px -2px 5px rgba(0, 0, 0, 0.8);
+    font-style: italic;
 }
 
-.nav-tabs ul li a:hover {
-    padding: 5px 8px;
-    border-radius: 10px;
-    background-color: var(--color-1);
-    color: var(--color-2);
-    text-shadow: none;
+.name-link {
+    text-decoration: none;
+    color: var(--title);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav ul li {
+    margin: 0 15px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    color: var(--title);
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--title);
+}
+
+.nav ul li a:hover {
+    color: var(--subtitle);
 }
 /* End Header Section */
 
+/* Hero Section */
+
+/* End Hero Section */
+
+/* About Me */
+
+/* Projects */
+
+/* Contact Info (footer) */
+
+
+/* Media Query Section */
+@media screen and (max-width: 980px) {
+    header {
+        padding: 5px;
+        justify-content: center;
+    }
+    
+    .my-name {
+        width: 100%;
+        font-size: 35px;
+        justify-content: center;
+    }
+
+    .name-link {
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--title);
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav ul {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav ul li {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .my-name {
+        width: 100%;
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    .name-link {
+        padding-bottom: 10px;
+        border-bottom: 4px solid var(--title);
+    }
+
+    .nav ul li {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .my-name {
+        padding: 5px;
+    }
+
+    .name-link {
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 5px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+}
