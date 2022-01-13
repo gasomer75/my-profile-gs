@@ -1,8 +1,10 @@
 /* Variables */
 :root {
     --subtitle: #2daf2d;
-    --bg-color: #347ba5;
+    --bg-color: rgb(12, 12, 85);
     --title: #a06017;
+    --border-color: black;
+    --title-border: 0 0 30px 20px var(--bg-color) inset;
 }
 
 /* Universal Settings */
@@ -17,20 +19,41 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.separator {
+    border-bottom: 15px solid var(--border-color);
+}
+
 /* Header Section*/
 header {
     padding: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-image: url("../images/space.jpg");
+    background-image: url("../images/starry-sky.jpg");
     background-size: cover;
-    background-position: 100%;
     background-attachment: fixed;
+    background-position: top;
     z-index: 9999;
+    box-shadow: var(--title-border);
+}
+
+.pic-cont {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+}
+
+.pic {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 14%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 7px var(--title);
+    opacity: 80%;
 }
 
 .my-name {
@@ -63,7 +86,7 @@ header {
 .nav ul li {
     margin: 0 15px;
     padding: 15px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     font-style: italic;
     font-variant: small-caps;
@@ -82,11 +105,78 @@ header {
 /* End Header Section */
 
 /* Hero Section */
+.hero {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    background-color: var(--bg-color);
+}
 
+.hero-cont {
+    justify-content: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+}
+
+.subtitle, .skills {
+    font-family: cursive;
+    color: var(--subtitle);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    font-size: 25px;
+    /*font-variant: small-caps;
+    font-weight: bold;
+    font-style: italic;*/
+}
 /* End Hero Section */
 
 /* About Me */
+.am-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+.am-title {
+    width: 20%;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    color: var(--title);
+    background-image: url("../images/starry-sky.jpg");
+    box-shadow: var(--title-border)
+}
+
+.my-intro {
+    width: 80%;
+    padding: 50px;
+    font-size: 22px;
+    color: var(--subtitle);
+    box-shadow: 0 0 10px 10px var(--bg-color) inset;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    background-color: var(--bg-color);
+
+}
+
+.my-intro p {
+    margin: 12px 0;
+    text-indent: 50px;
+}
 /* Projects */
 
 /* Contact Info (footer) */
@@ -96,16 +186,27 @@ header {
 @media screen and (max-width: 980px) {
     header {
         padding: 5px;
+        flex-wrap: wrap;
         justify-content: center;
     }
     
+    .pic-cont {
+        justify-content: center;
+    }
+
+    .pic {
+        width: 15%;
+    }
+
     .my-name {
         width: 100%;
-        font-size: 35px;
+        font-size: 38px;
         justify-content: center;
     }
 
     .name-link {
+        flex-direction: column;
+        align-items: center;
         padding-bottom: 10px;
         border-bottom: 2px solid var(--title);
     }
@@ -122,10 +223,54 @@ header {
 
     .nav ul li {
         font-size: 20px;
+        font-weight: bolder;
     }
+
+    .hero {
+        justify-content: center;
+    }
+
+    .hero-cont {
+        justify-content: center;
+    }
+
+    .subtitle, .skills {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .subtitle {
+        border-bottom: 2px solid var(--subtitle);
+    }
+
+    .am-cont {
+        flex-direction: column;
+    }
+
+    .am-title {
+        width: 100%;
+        padding: 20px 40px;
+        font-size: 35px;
+    }
+    
+    .my-intro {
+        width: 100%;
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    
 }
 
 @media screen and (max-width: 768px) {
+    .pic-cont {
+        flex: 0 0 60%;
+    }
+
+    .pic {
+        width: 20%;
+    }
+
     .my-name {
         width: 100%;
         font-size: 30px;
@@ -137,13 +282,41 @@ header {
         border-bottom: 4px solid var(--title);
     }
 
+    .nav ul {
+        margin-top: 5px;
+    }
+
     .nav ul li {
         margin: 0;
         font-size: 18px;
     }
+
+    .subtitle, .skills {
+        font-size: 13px;
+    }
+
+    .am-title {
+        font-size: 27px;
+    }
+    
+    .my-intro {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 575px) {
+    header {
+        position: relative;
+    }
+    
+    .pic-cont {
+        flex: 0 0 70%;
+    }
+
+    .pic {
+        width: 25%;
+    }
+
     .my-name {
         padding: 5px;
     }
@@ -164,5 +337,24 @@ header {
     .nav ul li {
         padding: 10px;
         text-align: center;
+    }
+
+    .subtitle, .skills {
+        /*padding: 0;*/
+        font-size: 10px;
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .am-title {
+        font-size: 22px;
+    }
+    
+    .my-intro {
+        font-size: 14px;
     }
 }
