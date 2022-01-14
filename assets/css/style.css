@@ -104,7 +104,6 @@ header {
 .nav ul li a:hover {
     color: var(--subtitle);
 }
-/* End Header Section */
 
 /* Hero Section */
 .hero {
@@ -123,7 +122,7 @@ header {
 }
 
 .subtitle, .skills {
-    font-family: cursive;
+    font-style: italic;
     color: var(--subtitle);
     padding: 10px;
     display: flex;
@@ -132,16 +131,17 @@ header {
     align-items: center;
     font-size: 25px;
 }
-/* End Hero Section */
 
-/* About Me */
-.am-cont {
+/* About Me and Contact Info */
+.am-cont, 
+.contact-in {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.am-title {
+.am-title, 
+.contact-title {
     width: 20%;
     padding: 0 40px;
     display: flex;
@@ -152,7 +152,7 @@ header {
     line-height: 2;
     font-size: 50px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-style: italic;
     font-variant: small-caps;
     color: var(--title);
@@ -164,13 +164,16 @@ header {
     width: 80%;
     padding: 50px;
     font-size: 26px;
-    color: var(--subtitle);
+    font-style: italic;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    color: var(--title);
     box-shadow: 0 0 10px 10px var(--bg-color) inset;
     display: flex;
     flex-wrap: wrap;
     text-align: left;
     background-color: var(--bg-color);
-
 }
 
 .my-intro p {
@@ -178,6 +181,7 @@ header {
     text-indent: 50px;
     line-height: 1.6;
 }
+
 /* Projects */
 .project-sect {
     display: flex;
@@ -199,15 +203,19 @@ header {
     justify-content: center;
 }
 
+.focus-link-cont a {
+    opacity: 50%;
+}
+
 .focus-link-pic {
     width: 100%;
     margin-top: 30px;
     padding: 150px;
-    background-image: url("../images/matrix.jpg");
+    background-image: url("../images/horiseon-image.png");
     background-position: center;
     background-size: cover;
-    border: 10px groove var(--title);
-    box-shadow: 0 0 20px 10px var(--title);
+    border: 10px groove var(--border-color);
+    opacity: 80%;
 }
 
 .focus-title {
@@ -228,6 +236,29 @@ header {
     text-decoration: none;
 }
 
+.focus-link-pic:hover, 
+.reg-link-pic-1:hover, 
+.reg-link-pic-2:hover, 
+.reg-link-pic-3:hover, 
+.reg-link-pic-4:hover, 
+.reg-link-pic-5:hover, 
+.reg-link-pic-6:hover {
+    border: 10px groove var(--title);
+    box-shadow: 0 0 20px 10px var(--title);
+    opacity: 100%;
+}
+
+.focus-title:hover, 
+.link-title:hover {
+    background-color: var(--title);
+    box-shadow: 0 0 20px 10px var(--title);
+}
+
+.focus-link:hover, 
+.link-title:hover {
+    color: var(--bg-color);
+}
+
 .reg-projects {
     width: 100%;
     display: flex;
@@ -243,15 +274,43 @@ header {
     justify-content: center;
 }
 
-.reg-link-pic {
+.reg-link-pic-1, 
+.reg-link-pic-2, 
+.reg-link-pic-3, 
+.reg-link-pic-4, 
+.reg-link-pic-5, 
+.reg-link-pic-6 {
     width: 100%;
     padding: 100px;
     padding: 50px;
-    background-image: url("../images/web-designer.jpg");
     background-position: center;
     background-size: cover;
-    border: 10px groove var(--title);
-    box-shadow: 0 0 20px 10px var(--title);
+    border: 10px groove var(--border-color);
+    opacity: 80%;
+}
+
+.reg-link-pic-1 {
+    background-image: url("../images/run-buddy-image.png");
+}
+
+.reg-link-pic-2 {
+    background-image: url("../images/matrix.jpg");
+}
+
+.reg-link-pic-3 {
+    background-image: url("../images/web-designer.jpg");
+}
+
+.reg-link-pic-4 {
+    background-image: url("../images/space.jpg");
+}
+
+.reg-link-pic-5 {
+    background-image: url("../images/color-computer.jpg");
+}
+
+.reg-link-pic-6 {
+    background-image: url("../images/stars-green.jpg");
 }
 
 .reg-title {
@@ -263,7 +322,7 @@ header {
     text-align: center;
 }
 
-.link-rb {
+.link-title {
     margin-top: 10px;
     padding: 2px;
     color: var(--title);
@@ -285,7 +344,7 @@ header {
     line-height: 2;
     font-size: 50px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-style: italic;
     font-variant: small-caps;
     color: var(--title);
@@ -294,8 +353,69 @@ header {
     writing-mode: vertical-lr;
     text-orientation: upright;
 }
-/* Contact Info (footer) */
 
+/* Contact Info */
+.contact-title {
+    line-height: 1.4;
+}
+
+.address {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--bg-color);
+}
+
+.street-ad, 
+.phone, 
+.email {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--title);
+    font-size: 22px;
+}
+
+.street-ad, 
+.phone {
+    border-right: 2px solid var(--title);
+}
+
+.email a {
+    color: var(--title);
+}
+
+/* Footer Fun */
+.thank-you {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+ 
+.hidden {
+    width: 75%;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0%;
+    color: var(--bg-color);
+}
+
+.hidden:hover {
+    opacity: 100%;
+    color: var(--title);
+}
 
 /* Media Query Section */
 @media screen and (max-width: 1400px) {
@@ -312,7 +432,21 @@ header {
     .am-title {
         font-size: 40px;
     }
-    
+
+    .contact-title {
+        padding: 20px 10px;
+        font-size: 32px;
+    }
+
+    .street-ad, 
+    .phone, 
+    .email {
+        font-size: 18px;
+    }
+
+    .thank-you {
+        padding: 10px;
+    }
 }
 @media screen and (max-width: 980px) {
     header {
@@ -365,7 +499,8 @@ header {
         justify-content: center;
     }
 
-    .subtitle, .skills {
+    .subtitle, 
+    .skills {
         padding: 5px;
         font-size: 18px;
     }
@@ -374,11 +509,13 @@ header {
         border-bottom: 2px solid var(--subtitle);
     }
 
-    .am-cont {
+    .am-cont, 
+    .contact-in {
         flex-direction: column;
     }
 
-    .am-title {
+    .am-title, 
+    .contact-title {
         width: 100%;
         padding: 20px 40px;
         font-size: 35px;
@@ -387,7 +524,7 @@ header {
     .my-intro {
         width: 100%;
         padding: 25px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .project-sect {
@@ -406,10 +543,15 @@ header {
         justify-content: center;
     }
 
-    /*.focus-link-pic {
-        background-size: calc(max-width = 200px);
-    }*/
-    
+    .address {
+        width: 100%;
+    }
+
+    .street-ad, 
+    .phone, 
+    .email {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -445,12 +587,16 @@ header {
         font-size: 13px;
     }
 
-    .am-title, .projects-title {
+    .am-title, 
+    .projects-title, 
+    .contact-title {
         font-size: 27px;
     }
     
     .my-intro {
         font-size: 16px;
+        letter-spacing: 1.5px;
+        word-spacing: 3px;
     }
 
     .focus-link-pic {
@@ -462,10 +608,20 @@ header {
         margin-top: 5px;
     }
 
-    .link-rb {
+    .link-title {
         font-size: 12px;
         margin-top: 5px;
         padding: 0;
+    }
+
+    .street-ad, 
+    .phone, 
+    .email {
+        font-size: 12px;
+    }
+
+    .hidden {
+        font-size: 20px;
     }
 }
 
@@ -504,35 +660,42 @@ header {
         text-align: center;
     }
 
-    .subtitle, .skills {
-        /*padding: 0;*/
-        font-size: 10px;
-    }
-
+    .subtitle, 
     .skills {
+        font-size: 10px;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .am-title, .projects-title {
+    .am-title, 
+    .projects-title {
         font-size: 22px;
     }
     
     .my-intro {
         font-size: 14px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
     }
 
     .focus-link-pic {
-
         padding: 80px;
     }
-    /*
-    .project-cont {
-        width: auto;
+
+    .focus-link, 
+    .link-title {
+        font-size: 10px;
+        letter-spacing: 1px;
     }
 
-    .reg-link-pic {
-        padding: 100px;
-    }*/
+    .street-ad, 
+    .phone, 
+    .email {
+        font-size: 8px;
+    }
+
+    .hidden {
+        font-size: 8px;
+    }
 }
