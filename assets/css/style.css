@@ -61,7 +61,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 40px;
+    font-size: 60px;
+    letter-spacing: 5px;
     font-variant: small-caps;
     font-weight: bold;
     font-style: italic;
@@ -75,7 +76,8 @@ header {
 .nav {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .nav ul {
@@ -86,7 +88,7 @@ header {
 .nav ul li {
     margin: 0 15px;
     padding: 15px;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
     font-style: italic;
     font-variant: small-caps;
@@ -129,9 +131,6 @@ header {
     justify-content: right;
     align-items: center;
     font-size: 25px;
-    /*font-variant: small-caps;
-    font-weight: bold;
-    font-style: italic;*/
 }
 /* End Hero Section */
 
@@ -151,8 +150,9 @@ header {
     justify-content: center;
     align-items: center;
     line-height: 2;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
+    letter-spacing: 5px;
     font-style: italic;
     font-variant: small-caps;
     color: var(--title);
@@ -163,7 +163,7 @@ header {
 .my-intro {
     width: 80%;
     padding: 50px;
-    font-size: 22px;
+    font-size: 26px;
     color: var(--subtitle);
     box-shadow: 0 0 10px 10px var(--bg-color) inset;
     display: flex;
@@ -176,13 +176,144 @@ header {
 .my-intro p {
     margin: 12px 0;
     text-indent: 50px;
+    line-height: 1.6;
 }
 /* Projects */
+.project-sect {
+    display: flex;
+    flex-wrap: wrap;
+}
+.projects {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--bg-color);
+}
 
+.focus-project-cont {
+    width: 100%;
+    margin: 30px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.focus-link-pic {
+    width: 100%;
+    margin-top: 30px;
+    padding: 150px;
+    background-image: url("../images/matrix.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 10px groove var(--title);
+    box-shadow: 0 0 20px 10px var(--title);
+}
+
+.focus-title {
+    margin-top: 10px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.focus-link {
+    color: var(--title);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+.reg-projects {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-cont {
+    width: 25%;
+    margin: 25px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reg-link-pic {
+    width: 100%;
+    padding: 100px;
+    padding: 50px;
+    background-image: url("../images/web-designer.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 10px groove var(--title);
+    box-shadow: 0 0 20px 10px var(--title);
+}
+
+.reg-title {
+    margin-top: 10px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.link-rb {
+    margin-top: 10px;
+    padding: 2px;
+    color: var(--title);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+.projects-title {
+    width: 20%;
+    padding: 90px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    line-height: 2;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-variant: small-caps;
+    color: var(--title);
+    background-image: url("../images/starry-sky.jpg");
+    box-shadow: var(--title-border);
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
 /* Contact Info (footer) */
 
 
 /* Media Query Section */
+@media screen and (max-width: 1400px) {
+    .my-name {
+        font-size: 42px;
+        letter-spacing: 3px;
+    }
+
+    .nav ul li {
+        padding: 0;
+        font-size: 26px;
+    }
+
+    .am-title {
+        font-size: 40px;
+    }
+    
+}
 @media screen and (max-width: 980px) {
     header {
         padding: 5px;
@@ -259,6 +390,25 @@ header {
         font-size: 18px;
     }
 
+    .project-sect {
+        flex-direction: column-reverse;
+    }
+
+    .projects {
+        width: 100%;
+    }
+
+    .projects-title {
+        width: 100%;
+        writing-mode: unset;
+        padding: 20px 40px;
+        font-size: 35px;
+        justify-content: center;
+    }
+
+    /*.focus-link-pic {
+        background-size: calc(max-width = 200px);
+    }*/
     
 }
 
@@ -295,12 +445,27 @@ header {
         font-size: 13px;
     }
 
-    .am-title {
+    .am-title, .projects-title {
         font-size: 27px;
     }
     
     .my-intro {
         font-size: 16px;
+    }
+
+    .focus-link-pic {
+        margin-top: 15px;
+    }
+
+    .focus-link {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .link-rb {
+        font-size: 12px;
+        margin-top: 5px;
+        padding: 0;
     }
 }
 
@@ -308,7 +473,7 @@ header {
     header {
         position: relative;
     }
-    
+
     .pic-cont {
         flex: 0 0 70%;
     }
@@ -350,11 +515,24 @@ header {
         text-align: center;
     }
 
-    .am-title {
+    .am-title, .projects-title {
         font-size: 22px;
     }
     
     .my-intro {
         font-size: 14px;
     }
+
+    .focus-link-pic {
+
+        padding: 80px;
+    }
+    /*
+    .project-cont {
+        width: auto;
+    }
+
+    .reg-link-pic {
+        padding: 100px;
+    }*/
 }
