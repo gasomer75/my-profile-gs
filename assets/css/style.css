@@ -52,7 +52,7 @@ header {
     margin-top: 10px;
     width: 14%;
     border-radius: 50%;
-    box-shadow: 0 0 15px 7px var(--title);
+    box-shadow: 0 0 15px 7px #015301;
     opacity: 80%;
 }
 
@@ -210,9 +210,9 @@ header {
 .focus-link-pic {
     width: 100%;
     margin-top: 30px;
-    padding: 150px;
-    background-image: url("../images/horiseon-image.png");
-    background-position: center;
+    height: 350px;
+    background-image: url("../images/rr-page-mystyle-before.png");
+    background-position: top;
     background-size: cover;
     border: 10px groove var(--border-color);
     opacity: 80%;
@@ -228,7 +228,7 @@ header {
 
 .focus-link {
     color: var(--title);
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
     font-style: italic;
@@ -283,22 +283,22 @@ header {
     width: 100%;
     padding: 100px;
     padding: 50px;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     border: 10px groove var(--border-color);
     opacity: 80%;
 }
 
 .reg-link-pic-1 {
-    background-image: url("../images/run-buddy-image.png");
+    background-image: url("../images/horiseon-image.png");
 }
 
 .reg-link-pic-2 {
-    background-image: url("../images/matrix.jpg");
+    background-image: url("../images/password-gen-image.png");
 }
 
 .reg-link-pic-3 {
-    background-image: url("../images/web-designer.jpg");
+    background-image: url("../images/run-buddy-image.png");
 }
 
 .reg-link-pic-4 {
@@ -584,7 +584,7 @@ header {
     }
 
     .subtitle, .skills {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .am-title, 
