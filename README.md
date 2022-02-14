@@ -21,7 +21,7 @@ To create an online presence to attract potential employers by showcasing my ski
 * Page must be deployed to GitHub URL and have a repository on GitHub with multiple commits and messages
 
 ### Page Screenshot
-![Geoffrey Somer's Profile Page](/assets/images/my-profile-page.png "Geoffrey Somer's Profile Page")
+![Geoffrey Somer's Profile Page](/assets/images/screenshot.png "Geoffrey Somer's Profile Page")
 
 #### Created By:
 Geoff Somer for UC Davis Coding Boot Camp, 2022
